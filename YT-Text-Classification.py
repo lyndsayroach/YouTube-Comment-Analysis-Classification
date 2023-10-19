@@ -425,14 +425,14 @@ plt.xlabel("Model Name")
 plt.ylabel("Accuracy")
 plt.show()
 
-''' We train a simple Logistic Regression ('multinomial') classification model with cross-fold-validation 
+''' We train a simple Multinomial NB classification model with cross-fold-validation 
 and view results in a confusion matrix. '''
 
 # Split the data into training (75%) and test sets (25%)
 X_train, X_test, y_train, y_test, indices_train, indices_test = train_test_split(features, labels, df_list.index, test_size=0.25, random_state=1)
 
-# Define the Logistic Regression model
-model = LogisticRegression(multi_class='multinomial', random_state=0)
+# Define the Multinomial NB model
+model = MultinomialNB(multi_class='multinomial', random_state=0)
 
 # Perform 5-fold cross-validation to assess model performance
 CV = 5
@@ -460,7 +460,7 @@ sns.heatmap(conf_mat, annot=True, cmap="Blues", fmt='d',
             yticklabels=category_id_df.Labels.values)
 plt.ylabel('Actual')
 plt.xlabel('Predicted')
-plt.title("Confusion Matrix - Logistic Regression (Multinomial)", size=16)
+plt.title("Confusion Matrix - Multinomial NB", size=16)
 
 ''' We implement a Convolutional Neural Network (CNN) for text classification.'''
 
