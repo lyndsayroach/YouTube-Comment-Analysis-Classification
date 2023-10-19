@@ -2,9 +2,10 @@
 
 In the following, we collect YouTube comments associated with news outlets reporting on the conflict in Ukraine. These comments are then categorized based on their respective news sources. The project leverages a combination of a YouTube API for web scraping and of machine learning algorithms for comment classification.
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/de614fc4-458a-467b-aeec-f8fac94aa537)
+![News_Oulet_Wordcloud](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/49e12c02-9215-4b3a-9891-9a22662fc491)
 
 ## Research Objective
+
 
 The objective of this project is to determine whether we can effectively classify YouTube comments originating from four distinct news sources based on their content. We have specifically opted to analyze comments from the following news outlets: Fox News, CNN, BBC, and Sky News. These selections were made because they offer diverse political perspectives from two different countries while also having overlapping viewership.
 
@@ -138,8 +139,7 @@ In this project, we make use of the Python package NLTK and adopt functions from
 
 Before applying any classification techniques, we will perform an exploratory analysis of our dataset. Following the adjustments made earlier, we observe that the number of comments collected from the three videos per news source now exhibits a roughly the same number of comments across all four sources.
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/b5a4873c-e2cf-4cbd-b922-03e002ce9d88)
-
+![News_Oulet_Histogram](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/4186b6b4-7b87-4df0-819e-9fb92a8d651a)
 
 We conducted an analysis of the word count statistics, both before and after text data cleaning. We see an approximately 46.77% decrease in the total word count from the raw text data to the processed text data, and this is also reflected in the average word count per comment.
 
@@ -159,7 +159,7 @@ Upon closer examination, we observed that the average word count for comments fr
 
 The following plot illustrates the top 30 most frequently used words, categorized by their respective news sources. Unsurprisingly, 'Ukraine,' 'Russia,' and 'war' emerge as the three most prominently featured words across all sources. Notably, our analysis reveals distinctive word usage patterns unique to each news source. For instance, 'tank' is frequent in content from Sky News but absent from Fox News. Conversely, 'Biden' is frequent in Fox News content, suggesting that these variations may be attributed to the distinct subject matter and content focus of each video.
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/574162f0-0093-4220-8254-511965c7e280)
+![News_Outlet_Top30Words_by_Outlet](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/649639f5-770d-4e55-b86d-f194a1513873)
 
 We use the TF-IDF scores to analyze the correlation between unigrams (single words) and bigrams (pairs of words) within a set of comments. In our feature matrix, each row represents a video comment, and each column represents a unique word, where we have 6624 comments and 3555 features. The following results pertain to the top five most correlated unigrams and bigrams:
 
@@ -203,15 +203,15 @@ To gain deeper insights, we delve into the results specifically for the multinom
 
 The confusion matrix provides insights into the model's performance. It indicates that CNN and BBC comments were frequently mistaken for each other, while Fox News comments were most commonly confused with CNN. Additionally, Sky News comments were often misclassified as BBC comments. These findings align with the correlations we observed among unigrams and bigrams. The results imply that comments from Fox News tend to be more distinct compared to those from the other three news outlets.
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/10261dbb-124c-4f0a-b65a-441d53abc4fd)
+![News_Oulet_ConfusionMatrix](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/20bc4386-4b18-412f-b7e9-dc72182c534f)
 
 Lastly, we aim to improve these results by employing a Convolutional-NN with word embeddings. In the following plot, it is evident that the training loss is steadily decreasing, while the validation loss is showing an increase. When this pattern occurs, with the training loss continuing to decrease while the validation loss either increases or remains relatively unchanged, it is sign of overfitting. It signifies that the model is memorizing the training data rather than genuinely learning the underlying patterns present in the data. 
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/aaea114d-a6d9-4f08-a7fd-aa993b179d18)
+![News_Oulet_Results_CNN1](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/57eed485-96f0-42d9-b0d8-99ddcd29b379)
 
 This next plot reveals a pattern in which the training accuracy steadily increases, while the validation accuracy remains relatively constant. When the training accuracy is much higher than validation accuracy, it suggests the model has overfit the training data.
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/8ed39e0c-7417-4016-abdb-06aa619c9876)
+![News_Oulet_Results_CNN2](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/6e262620-60e7-41e2-9175-ab81c6ad2352)
 
 ## Conclusions
 
