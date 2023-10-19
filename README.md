@@ -73,12 +73,12 @@ We utilized the YouTube API to gather comments from four prominent news sources:
     <tr>
       <th>3</th>
       <td>l7C7vNa2-K0</td>
-      <td>[no wonder 🤔 u.s lose war in afgan, vietnam, s...</td>
+      <td>[Osint estimates October 17 2023\n\nUkraine Ar...</td>
     </tr>
     <tr>
       <th>4</th>
       <td>kyaALHVnEW8</td>
-      <td>[Amidst the usual propaganda, a little truth s...</td>
+      <td>[100 sq miles have been recovered and they awa...</td>
     </tr>
   </tbody>
 </table>
@@ -89,8 +89,8 @@ We apply the relevant labels to these videos and examine the distribution of com
 | News Source | Comment Count (Before) | Comment Count (After) |
 |-------------|---------------|----------------|
 | CNN         | 3811          | 1811          |
-| BBC         | 1826          | 1826         |
-| Sky News     | 1775          | 1775          |
+| BBC         | 1822          | 1822         |
+| Sky News     | 1771          | 1771          |
 | Fox News     | 1220          | 1220           |
 
 In this project, we make use of the Python package NLTK and adopt functions from the 'text_classification_glove_embeddings.ipynb' notebook, found [here](https://github.com/embedded-robotics/datascience), to process our text data from the YouTube comments. We store the processed text in two separate data frames along with their corresponding labels. This allows for easy access to both data formats in the future. In one data frame, the comments are stored as strings, while in the other, the comments are stored as lists of individual words. Here is what the latter data frame structure looks like:
