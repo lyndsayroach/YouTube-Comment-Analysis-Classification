@@ -189,7 +189,8 @@ First, we perform classification by comparing machine learning algorithms, inclu
 We evaluate the performance of our predictive models using a 5-fold cross-validation process. Our initial dataset is randomly partitioned into five approximately equal-sized subsets, often referred to as 'folds,' with each fold containing a portion of the data points. Within each iteration, we divide these folds into 75% training data and 25% test data. During each iteration, the model is trained on the training set, composed of four of the folds, and subsequently assessed on the remaining fold, which serves as the testing set. 
 The following boxplot illustrates the distribution of accuracy scores for each model. We observe that none of the models perform particularly strongly, with the multinomial NB model achieving the highest accuracy score of 0.5347 (the multinomial logistic regression model had accuracy 0.5344). 
 
-![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/24822f57-3409-43f6-a2a9-54073a46ec94)
+![News_Oulet_Results_Boxlpot](https://github.com/lyndsayroach/YouTube-Comment-Analysis-Classification/assets/17256163/77a53220-f9ff-431d-b5c5-021484898746)
+
 
 To gain deeper insights, we delve into the results specifically for the multinomial NB model, examining its performance within each category. We find that that comments from Fox News and Sky News appear to be more straightforward to classify.
 
