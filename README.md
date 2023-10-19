@@ -141,21 +141,21 @@ Before applying any classification techniques, we will perform an exploratory an
 ![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/b5a4873c-e2cf-4cbd-b922-03e002ce9d88)
 
 
-We conducted an analysis of the word count statistics, both before and after text data cleaning. We see an approximately 46.76% decrease in the total word count from the raw text data to the processed text data, and this is also reflected in the average word count per comment.
+We conducted an analysis of the word count statistics, both before and after text data cleaning. We see an approximately 46.77% decrease in the total word count from the raw text data to the processed text data, and this is also reflected in the average word count per comment.
 
 |                                 | Raw Data     | Processed Data  |
 |---------------------------------------|--------------|---------------|
-| Total Word Count                       | 187,841      | 100,077       |
-| Average Word Count per Comment         | 28.32      | 15.09       |
+| Total Word Count                       | 188,663      | 100,417       |
+| Average Word Count per Comment         | 28.48      | 15.16       |
 
 Upon closer examination, we observed that the average word count for comments from BBC and CNN remained slightly above the overall average both before and after data cleaning. Conversely, for comments from Fox News and Sky News, the average word count was slightly below the overall average, both before and after the cleaning process.
 
 |   | Average Word Count (Raw Data) | Average Word Count (Processed Data) |
 |---------|-----------------------------|-----------------------------|
-| BBC     | 30.68                       | 16.53                       |
-| CNN     | 31.94                       | 17.02                       |
+| BBC     | 30.63                       | 16.51                       |
+| CNN     | 32.58                       | 17.29                       |
 | Fox News | 25.11                       | 13.00                       |
-| Sky News | 24.41                       | 13.08                       |
+| Sky News | 24.40                      | 13.08                       |
 
 The following plot illustrates the top 30 most frequently used words, categorized by their respective news sources. Unsurprisingly, 'Ukraine,' 'Russia,' and 'war' emerge as the three most prominently featured words across all sources. Notably, our analysis reveals distinctive word usage patterns unique to each news source. For instance, 'tank' is frequent in content from Sky News but absent from Fox News. Conversely, 'Biden' is frequent in Fox News content, suggesting that these variations may be attributed to the distinct subject matter and content focus of each video.
 
