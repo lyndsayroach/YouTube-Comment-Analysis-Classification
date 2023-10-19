@@ -161,25 +161,23 @@ The following plot illustrates the top 30 most frequently used words, categorize
 
 ![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/574162f0-0093-4220-8254-511965c7e280)
 
-We use the TF-IDF scores to analyze the correlation between unigrams (single words) and bigrams (pairs of words) within a set of comments. In our feature matrix, each row represents a video comment, and each column represents a unique word, where we have 6632 comments and 3620 features. The following results pertain to the top five most correlated unigrams and bigrams:
+We use the TF-IDF scores to analyze the correlation between unigrams (single words) and bigrams (pairs of words) within a set of comments. In our feature matrix, each row represents a video comment, and each column represents a unique word, where we have 6624 comments and 3555 features. The following results pertain to the top five most correlated unigrams and bigrams:
 
 **BBC**
-  * Most Correlated Unigrams: nazi, tank, cannafarm, succeed, bbc
-  * Most Correlated Bigrams: seriously mention, slava russia, bbc propaganda, game changer, war crime
-    
+  * Most Correlated Unigrams: tank, nazi, cannafarm, succeed, bbc
+  * Most Correlated Bigrams: love guy, war crime, slava russia, bbc propaganda, game changer
 **CNN**
-  * Most Correlated Unigrams: bbc, sober, chris, cnn, christie
-  * Most Correlated Bigrams: cnn propaganda, news network, cnn say, dragon teeth, chris christie
-    
+  * Most Correlated Unigrams: dragon, sober, chris, cnn, christie
+  * Most Correlated Bigrams: like cnn, ukraine strategy, support ukraine, dragon teeth, chris christie
 **Fox News**
-  * Most Correlated Unigrams: fox, biden, joe, impeach, mccarthy
+  * Most Correlated Unigrams: impeachment, joe, biden, impeach, mccarthy
   * Most Correlated Bigrams: impeach biden, talk action, talk talk, joe biden, fox news
-    
-**Sky News**
-  * Most Correlated Unigrams: sky, changer, leopard, abrams, tank
+]**Sky News**
+  * Most Correlated Unigrams: challenger, changer, leopard, abrams, tank
   * Most Correlated Bigrams: abrams tank, sean bell, deplete uranium, sky news, game changer
 
-In the case of all three news sources, the most correlated unigrams and bigrams prominently feature their own names. This observation might stem from viewers either mentioning the news outlet in their comments or replying directly to the respective YouTube channels. In either case, it indicates that the viewer has a desire to engage with a particular new outlet. Additionally, we observe that 'BBC' is present as a significant unigram in the CNN comments, and 'game changer' appears in both BCC and Sky News comments. The bigrams associated with BBC, CNN, and Sky News capture the topic of war, featuring phrases like 'war crime,' 'dragon teeth,' and 'abrams tank.' In contrast, the bigrams related to Fox News focus on domestic news, as evident in the phrase 'impeach biden.' It is worth noting that there is as absence of mentions of 'ukraine,' and only a single instance of the word 'russia' in the provided results. 
+
+In the case of all three news sources, the most correlated unigrams and bigrams prominently feature their own names. This observation might stem from viewers either mentioning the news outlet in their comments or replying directly to the respective YouTube channels. In either case, it indicates that the viewer has a desire to engage with a particular new outlet. The bigrams associated with BBC, CNN, and Sky News capture the topic of war, featuring phrases like 'war crime,' 'dragon teeth,' and 'abrams tank.' In contrast, the bigrams related to Fox News focus on domestic news, as evident in the phrase 'impeach biden.' Additionally, it is worth highlighting that the American politician 'chris christie' appears within the correlated bigrams for CNN. Notably, 'Ukraine' is exclusively mentioned in both the unigrams and bigrams associated with CNN, while 'Russia' is specifically featured in the content from the BBC.
 
 ## Text Classification
 
