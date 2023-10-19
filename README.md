@@ -166,12 +166,15 @@ We use the TF-IDF scores to analyze the correlation between unigrams (single wor
 **BBC**
   * Most Correlated Unigrams: tank, nazi, cannafarm, succeed, bbc
   * Most Correlated Bigrams: love guy, war crime, slava russia, bbc propaganda, game changer
+    
 **CNN**
   * Most Correlated Unigrams: dragon, sober, chris, cnn, christie
   * Most Correlated Bigrams: like cnn, ukraine strategy, support ukraine, dragon teeth, chris christie
+    
 **Fox News**
   * Most Correlated Unigrams: impeachment, joe, biden, impeach, mccarthy
   * Most Correlated Bigrams: impeach biden, talk action, talk talk, joe biden, fox news
+    
 ]**Sky News**
   * Most Correlated Unigrams: challenger, changer, leopard, abrams, tank
   * Most Correlated Bigrams: abrams tank, sean bell, deplete uranium, sky news, game changer
@@ -184,18 +187,19 @@ In the case of all three news sources, the most correlated unigrams and bigrams 
 First, we perform classification by comparing machine learning algorithms, including Random Forest, Linear Support Vector Classifier (LinearSVC), Multinomial Naive Bayes (MultinomialNB), and Logistic Regression with the 'multinomial' option.
 
 We evaluate the performance of our predictive models using a 5-fold cross-validation process. Our initial dataset is randomly partitioned into five approximately equal-sized subsets, often referred to as 'folds,' with each fold containing a portion of the data points. Within each iteration, we divide these folds into 75% training data and 25% test data. During each iteration, the model is trained on the training set, composed of four of the folds, and subsequently assessed on the remaining fold, which serves as the testing set. 
-The following boxplot illustrates the distribution of accuracy scores for each model. We observe that none of the models perform particularly strongly, with the multinomial logistic regression model achieving the highest accuracy score of 0.54. 
+The following boxplot illustrates the distribution of accuracy scores for each model. We observe that none of the models perform particularly strongly, with the multinomial NB model achieving the highest accuracy score of 0.5347 (the multinomial logistic regression model had accuracy 0.5344). 
 
 ![image](https://github.com/lyndsayroach/Text-Analysis-Classification/assets/17256163/24822f57-3409-43f6-a2a9-54073a46ec94)
 
-To gain deeper insights, we delve into the results specifically for the multinomial logistic regression model, examining its performance within each category. We find that that comments from Fox News and Sky News appear to be more straightforward to classify.
+To gain deeper insights, we delve into the results specifically for the multinomial NB model, examining its performance within each category. We find that that comments from Fox News and Sky News appear to be more straightforward to classify.
 
 |      | Precision | Recall | F1-Score |  
 |:---------:|:---------:|:------:|:--------:|
-|  FoxNews  |   0.72    |  0.65  |   0.68   |  
-|    CNN    |   0.58    |  0.53  |   0.55   |   
-|    BBC    |   0.53    |  0.64  |   0.58   |   
-|  SkyNews  |   0.62    |  0.58  |   0.60   |  
+|  FoxNews  |   0.80    |  0.59  |   0.68   |  
+|    CNN    |   0.55    |  0.52  |   0.53   |   
+|    BBC    |   0.49    |  0.67  |   0.56   |   
+|  SkyNews  |   0.64    |  0.56  |   0.60   |  
+
 
 The confusion matrix provides insights into the model's performance. It indicates that CNN and BBC comments were frequently mistaken for each other, while Fox News comments were most commonly confused with CNN. Additionally, Sky News comments were often misclassified as BBC comments. These findings align with the correlations we observed among unigrams and bigrams. The results imply that comments from Fox News tend to be more distinct compared to those from the other three news outlets.
 
@@ -211,7 +215,7 @@ This next plot reveals a pattern in which the training accuracy steadily increas
 
 ## Conclusions
 
-Despite our exploratory analysis and the diverse classification methods we applied, we faced a challenge in achieving classification accuracy higher than 54%. Nevertheless, our efforts yielded valuable insights into the underlying patterns within the YouTube comments. Notably, we found that comments on Fox News videos exhibited a distinctiveness compared to comments from other news outlets. Specifically, that some of the primary topics in Fox News comments were centred around domestic politics rather than the conflict itself, rendering these comments more identifiable.  
+Despite our exploratory analysis and the diverse classification methods we applied, we faced a challenge in achieving classification accuracy higher than 53%. Nevertheless, our efforts yielded valuable insights into the underlying patterns within the YouTube comments. Notably, we found that comments on Fox News videos exhibited a distinctiveness compared to comments from other news outlets. Specifically, that some of the primary topics in Fox News comments were centred around domestic politics rather than the conflict itself, rendering these comments more identifiable. Interestingly, upon examining the comprehensive results derived from the multinomial NB model, we observed that Fox News comments were accurately classified with an F1-score of 0.68, while Sky News achieved an F1-score of 0.60. It is noteworthy that both of these news outlets both achieved results than the other two news oulets because they are generally associated with a more conservative perspective. This suggests the possibility of distinct commenting patterns among their viewers or, alternatively, less viewership crossover between these two audiences and the audiences of CNN and BCC.
 
 
 
