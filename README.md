@@ -175,7 +175,7 @@ We use the TF-IDF scores to analyze the correlation between unigrams (single wor
   * Most Correlated Unigrams: impeachment, joe, biden, impeach, mccarthy
   * Most Correlated Bigrams: impeach biden, talk action, talk talk, joe biden, fox news
     
-]**Sky News**
+**Sky News**
   * Most Correlated Unigrams: challenger, changer, leopard, abrams, tank
   * Most Correlated Bigrams: abrams tank, sean bell, deplete uranium, sky news, game changer
 
